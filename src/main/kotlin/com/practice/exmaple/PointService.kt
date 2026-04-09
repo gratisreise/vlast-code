@@ -21,7 +21,7 @@ class PointService(
         val from = if (first.id == fromUserId) first else second
         val to = if (first.id == toUserId) first else second
 
-        // 4. 도메인 객체에 로직 위임 (Tell, Don't Ask)
+        // 4. 도메인 객체에 로직 위임
         from.decreasePoint(amount)
         to.increasePoint(amount)
     }
